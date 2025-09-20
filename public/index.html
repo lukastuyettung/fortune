@@ -2,32 +2,85 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Bói toán</title>
+  <title>Bói toán pastel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px; }
-    input, button { padding: 10px; margin: 10px; }
-    .answer { margin-top: 20px; font-size: 20px; color: darkblue; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #333;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #8e24aa;
+    }
+    input {
+      padding: 12px;
+      border-radius: 12px;
+      border: 2px solid #ba68c8;
+      width: 260px;
+      text-align: center;
+      outline: none;
+      font-size: 1em;
+      background: #fff;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 12px;
+      background: #f48fb1;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ec407a;
+      transform: scale(1.05);
+    }
+    .answer {
+      margin-top: 30px;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #d81b60;
+      opacity: 0;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .answer.show {
+      opacity: 1;
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
-  <h1>Hỏi gì đi...</h1>
+  <h1>✨ Hỏi tôi đi ✨</h1>
   <input type="text" id="question" placeholder="Nhập câu hỏi...">
   <button onclick="getAnswer()">Xem bói</button>
   <div class="answer" id="answer"></div>
 
   <script>
     const answers = [
-      "Có thể lắm chứ!",
-      "Chắc chắn rồi!",
-      "Không đời nào!",
-      "Cứ thử đi, đừng sợ.",
-      "Ngày mai sẽ rõ.",
-      "Số phận đã an bài."
+      "Có thể lắm chứ 🌸",
+      "Chắc chắn rồi 💖",
+      "Không đời nào 🙈",
+      "Cứ thử đi, đừng sợ 🌈",
+      "Ngày mai sẽ rõ ☀️",
+      "Số phận đã an bài 🌙"
     ];
-
     function getAnswer() {
       const randomIndex = Math.floor(Math.random() * answers.length);
-      document.getElementById("answer").innerText = answers[randomIndex];
+      const answerDiv = document.getElementById("answer");
+      answerDiv.innerText = answers[randomIndex];
+      answerDiv.classList.remove("show");
+      setTimeout(() => answerDiv.classList.add("show"), 50);
     }
   </script>
 </body>
