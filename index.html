@@ -1,50 +1,34 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8">
+  <title>Bói toán</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    input, button { padding: 10px; margin: 10px; }
+    .answer { margin-top: 20px; font-size: 20px; color: darkblue; }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Bói toán&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: sans-serif; text-align: center; padding: 50px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>input, button { padding: 10px; margin: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.answer { margin-top: 20px; font-size: 20px; color: darkblue; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Hỏi gì đi...&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type="text" id="question" placeholder="Nhập câu hỏi..."&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="getAnswer()"&gt;Xem bói&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="answer" id="answer"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const answers = [</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"Có thể lắm chứ!",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"Chắc chắn rồi!",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"Không đời nào!",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"Cứ thử đi, đừng sợ.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"Ngày mai sẽ rõ.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>"Số phận đã an bài."</p>
-<p class="p1"><span class="Apple-converted-space">    </span>];</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function getAnswer() {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const randomIndex = Math.floor(Math.random() * answers.length);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("answer").innerText = answers[randomIndex];</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <h1>Hỏi gì đi...</h1>
+  <input type="text" id="question" placeholder="Nhập câu hỏi...">
+  <button onclick="getAnswer()">Xem bói</button>
+  <div class="answer" id="answer"></div>
+
+  <script>
+    const answers = [
+      "Có thể lắm chứ!",
+      "Chắc chắn rồi!",
+      "Không đời nào!",
+      "Cứ thử đi, đừng sợ.",
+      "Ngày mai sẽ rõ.",
+      "Số phận đã an bài."
+    ];
+
+    function getAnswer() {
+      const randomIndex = Math.floor(Math.random() * answers.length);
+      document.getElementById("answer").innerText = answers[randomIndex];
+    }
+  </script>
 </body>
 </html>
