@@ -15,6 +15,12 @@
       flex-direction: column;
       color: #e0e0e0;
     }
+    .chibi {
+      width: 120px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    }
     h1 {
       font-family: 'Cinzel', serif;
       font-size: 2.5em;
@@ -65,7 +71,11 @@
   </style>
 </head>
 <body>
+  <!-- Hình cô Hà -->
+  <img src="images/coha.png" alt="Cô Hà chibi" class="chibi">
+
   <h1>🔮 Oracle of Fate 🔮</h1>
+
   <input type="text" id="question" placeholder="Hỏi điều bí ẩn...">
   <button onclick="getAnswer()">Xem lời sấm</button>
   <div class="answer" id="answer"></div>
